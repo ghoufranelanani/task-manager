@@ -1,0 +1,12 @@
+[
+    {"title": "Read a chapter of a novel", "done": false},
+    {"title": "Practice 20 minutes of drawing", "done": true},
+    {"title": "Go for a 30-minute walk", "done": false},
+    {"title": "Try a new recipe for lunch", "done": false},
+    {"title": "Watch a documentary about space", "done": true},
+    {"title": "Meditate for 10 minutes", "done": false},
+    {"title": "Practice a musical instrument", "done": true},
+    {"title": "Write a short story or journal entry", "done": false},
+    {"title": "Organize your study desk", "done": false},
+    {"title": "Learn 5 new words in a foreign language", "done": true}
+]
