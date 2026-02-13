@@ -21,4 +21,3 @@ This program allows students to add, view, edit, delete, mark tasks as done, and
 
 
 This project was created as a Python assignment.
-Update README.md with features and instructions
