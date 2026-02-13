@@ -1,5 +1,7 @@
+import json
 from google.colab import drive
 drive.mount('/content/drive')
+
 
 def show_menu():
     print("\n=== Task Manager ===")
@@ -12,7 +14,10 @@ def show_menu():
     print("7. Delete a task")
     print("8. Exit")
 
+
 tasks = []
+
+
 def add_task():
     title = input("Enter task title: ").strip()
 
@@ -28,6 +33,7 @@ def add_task():
     tasks.append(task)
     print("Task added successfully!")
 
+
 def list_tasks():
     if len(tasks) == 0:
         print("No tasks found.")
@@ -37,6 +43,7 @@ def list_tasks():
     for i, task in enumerate(tasks, start=1):
         status = "Done" if task["done"] else "Not done"
         print(f"{i}. {task['title']} [{status}]")
+
 
 def mark_task_done():
     if len(tasks) == 0:
@@ -64,8 +71,10 @@ def mark_task_done():
     else:
         task["done"] = True
         print("Task marked as done!")
-
+# This part added by me – just a little helpful touch :)
 # for edit
+
+
 def edit_task():
     if len(tasks) == 0:
         print("No tasks to edit.")
@@ -94,6 +103,8 @@ def edit_task():
     print("Task updated successfully!")
 
 # for delete
+
+
 def delete_task():
     if len(tasks) == 0:
         print("No tasks to delete.")
@@ -115,19 +126,22 @@ def delete_task():
     deleted_task = tasks.pop(task_num - 1)
     print(f"Task '{deleted_task['title']}' deleted successfully!")
 
-import json
+
 def save_tasks():
     try:
-        with open("/content/drive/MyDrive/Colab Notebooks/quantum/tasks.json", "w", encoding="utf-8") as f:
+        with open("/content/drive/MyDrive/Colab Notebooks/quantum/tasks.json",
+                  "w", encoding="utf-8") as f:
             json.dump(tasks, f, indent=4, ensure_ascii=False)
         print("Tasks saved to tasks.json successfully!")
     except Exception as e:
         print("Error while saving tasks:", e)
 
+
 def load_tasks():
     global tasks
     try:
-        with open("/content/drive/MyDrive/Colab Notebooks/quantum/tasks.json", "r", encoding="utf-8") as f:
+        with open("/content/drive/MyDrive/Colab Notebooks/quantum/tasks.json",
+                  "r", encoding="utf-8") as f:
             tasks = json.load(f)
         print("Tasks loaded from tasks.json successfully!")
     except FileNotFoundError:
@@ -137,12 +151,11 @@ def load_tasks():
     except Exception as e:
         print("Error while loading tasks:", e)
 
+
 def main():
     while True:
         show_menu()
         choice = input("Choose an option (1-8): ").strip()
-
-
         if choice == "1":
             add_task()
         elif choice == "2":
