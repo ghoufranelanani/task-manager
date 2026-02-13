@@ -1,13 +1,38 @@
 [
-    {"title": "Read a chapter of a novel", "done": false},
-    {"title": "Practice 20 minutes of drawing", "done": true},
-    {"title": "Go for a 30-minute walk", "done": false},
-    {"title": "Try a new recipe for lunch", "done": false},
-    {"title": "Watch a documentary about space", "done": true},
-    {"title": "Meditate for 10 minutes", "done": false},
-    {"title": "Practice a musical instrument", "done": true},
-    {"title": "Write a short story or journal entry", "done": false},
-    {"title": "Organize your study desk", "done": false},
-    {"title": "Learn 5 new words in a foreign language", "done": true}
-    {"title": "Drink water and relax", "done": false}
+    {
+        "title": "Read a chapter of a novel",
+        "done": false
+    },
+    {
+        "title": "Write a summary of a lesson",
+        "done": true
+    },
+    {
+        "title": "Write a short essay or journal entry",
+        "done": false
+    },
+    {
+        "title": "Review previous homework assignments",
+        "done": false
+    },
+    {
+        "title": "Make a study schedule for the week",
+        "done": true
+    },
+    {
+        "title": "Break for 10 minutes",
+        "done": false
+    },
+    {
+        "title": "Listen to a podcast",
+        "done": true
+    },
+    {
+        "title": "Organize your study desk",
+        "done": false
+    },
+    {
+        "title": "Learn 5 new words in a foreign language",
+        "done": true
+    }
 ]
